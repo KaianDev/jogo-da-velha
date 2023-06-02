@@ -113,11 +113,27 @@ function isFull() {
     return true;
 }
 
+function toggleTheme () {
+    document.body.classList.toggle('dark');
+
+    let = btnTheme = document.querySelector('.toggle-theme i');
+
+    if(btnTheme.classList.contains('fa-moon')) {
+        btnTheme.classList.remove('fa-moon');
+        btnTheme.classList.add('fa-sun');
+    } else {
+        btnTheme.classList.add('fa-moon');
+        btnTheme.classList.remove('fa-sun');
+    }
+    
+}
+
 //Events
 document.querySelector('#reset').addEventListener('click',reset);
 document.querySelectorAll('.area-click').forEach((area) => {
     area.addEventListener('click', playClick)
-});
+})
+document.querySelector('.toggle-theme').addEventListener('click',toggleTheme);
 
 reset();
 
