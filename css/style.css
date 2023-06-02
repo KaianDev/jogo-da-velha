@@ -1,26 +1,43 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    transition: all .2s ease;
 }
 
 .area {    
     height: 100vh;
 }
 
+.container {
+    position: relative;
+}
+
 .area-click {
     height: 150px;
     cursor: pointer;
     max-width: 150px;
-    transition: all .4s ease;
+    transition: all .1s ease;
     color: #444;
     font-size: 4em;
 }
 
- .border-bottom, .border-top, .border-left , .border-right {
-    border-color: #0000005b !important;
+.border-tp {
+    border-top: 1px solid #000000c0;
+}
+
+.border-bt {
+    border-bottom: 1px solid #000000c0;
+}
+
+.border-lf {
+    border-left: 1px solid #000000c0;
+}
+
+.border-rt {
+    border-right: 1px solid #000000c0;
 }
 
 .area-click:hover {
-    background: #ddd;
+    background: #dddddd;
 }
 
 .centralizar {
@@ -43,4 +60,36 @@ body {
 
 .altura {
     max-height: 100px;
+}
+
+/* Dark-mode
+----------------------------- */
+
+body.dark {
+    color: #fff;
+    background: #222;
+}
+
+body.dark .border-bt, 
+body.dark .border-tp, 
+body.dark .border-lt ,
+body.dark .border-rt {
+    border-color: #ffffff5b ;
+}
+
+body.dark .area-click:hover {
+    background: #dddddd25;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.toggle-theme:hover {
+    opacity: .8;
+    transform: scale(1.1);
 }
