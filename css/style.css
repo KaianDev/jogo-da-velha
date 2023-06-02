@@ -87,6 +87,13 @@ body.dark .area-click:hover {
     right: 4%;
     cursor: pointer;
     transition: all .3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #007bff;
+}
+
+.toggle-theme i {
+    pointer-events: none;
 }
 
 .toggle-theme:hover {
