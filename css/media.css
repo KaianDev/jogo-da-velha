@@ -11,6 +11,11 @@
     h3 {
         font-size: 1.5em;
     }
+    
+    .toggle-theme {
+        top: 2%;
+        right: 2%; 
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
